@@ -1,0 +1,23 @@
+package Outback;
+
+public class Grade extends Customer{
+	public Grade(String name, int count, int balance) {
+		super(name, count, balance);
+	}
+
+	int count = super(count);
+	
+	public String grade;
+	
+	public static String runGrade() {
+		if(count>=10 || balance>=200000) {
+			return grade="골드";
+		} else if (count>=10 || balance>=150000) {
+			return grade="실버";
+		} else if (count>=5 || balance>=100000) {
+			return grade="브론즈";
+		} else {
+			return grade="일반";
+		}
+	}
+}

@@ -1,0 +1,227 @@
+package sec07.exam03_chatting;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Vector;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+
+
+public class ServerExample extends Application {
+	//해당 서비스를 제공하기 위해 스래그 풀을 형성
+	ExecutorService executorService;
+	//Server와 Client간에 TCP연결을 위해 Server Socket을 형성
+	ServerSocket serverSocket;
+	//For using multiple Objetct, Decernation Collection framWork. 
+	//여러 객체를 효율적으로 사용하기 위해 컬렉션 프레임 워크를 생성한다.
+	//해당 배열에서 Vector를 사용하는 이유는 해당 List의 구현 클래스인 Vector는 
+	//Synchronized 되어 있어 멀티 스래드 환경에서도 데이터의 손실 없에 핸당 Thread를 진행해 준다.
+	List<Client> connections = new Vector<Client>();
+	
+	
+	void startServer() {
+		//다 했던거. 여태까지 했던것들이 한데 뭉쳐있어서 보기 복잡해 보일 뿐 안배운것에서 나온 것은 없다.
+		//해당 채팅구문의 경우 풀 이번주에 있을 풀 복습을 끝내고 다시한번 볼 수있도록 할 것
+		
+		
+		//현재 가용 가능한 모든 코어를 사용한다는 듰. 이것이 자바다 12징 멀티스레드편 627페이지 참고
+		executorService = Executors.newFixedThreadPool(
+					Runtime.getRuntime().availableProcessors()
+				);
+		try{
+			//Client가 접속하기 위한 serverSocket을 생성
+			serverSocket = new ServerSocket();
+			serverSocket.bind(new InetSocketAddress("localhost", 5001));
+		} catch(Exception e) {
+			if(!serverSocket.isClosed()) {stopServer();}
+			return;
+		}
+
+		//Threadpoll에서 돌아갈 Thread를 형성
+		Runnable runnable = new Runnable() {
+
+			@Override
+			public void run() {
+				//UI 관련된 부분. 몰라! 이 부분 배우면 다음에
+				Platform.runLater(()->{
+					displayText("서버시작");
+					btnStartStop.setText("Stop");
+						
+				});
+				while(true) {
+					try {
+						//본격적으로 Client를 통해 input된 데이터를 output으로 전환
+						Socket socket = serverSocket.accept();
+						String message = "[연결 수락: "+socket.getRemoteSocketAddress()+": "+ Thread.currentThread().getName() + "]";
+						Platform.runLater(()->displayText(message));
+						
+						Client client = new Client(socket);
+						connections.add(client);
+						Platform.runLater(()-> displayText("[연결 갯수: " + connections.size()+"]"));
+						
+						
+					}catch(Exception e) {
+						if(!serverSocket.isClosed()) {stopServer();}
+						break;
+					}
+				}
+			}
+			
+		};
+		//해당 threadPoll에서 작업 threa에 연결 수락 작업를 실행 하기 위해 해당 스레드를 돌린다.
+		executorService.submit(runnable);
+ 		
+	}
+	void stopServer() {
+		try {
+			//위세 Start에서 받아 connections에 저장된 Client를 받아오기 위하 반복자를 형성
+			Iterator<Client> iterator = connections.iterator();
+			
+			//connections에 저장되어 있는 client obeject를 전부 하나씩 끄집어 냄.
+			while(iterator.hasNext()) {
+				Client client = iterator.next();
+				//해당 클라이언트 프로그램을종료
+				client.socket.close();
+				//이제 필요없어진 socket을 제거
+				iterator.remove();
+			}
+			
+			//위에서 client를 전부 지움으로써 socket 연결도 전부 끊김. 그러므로 이제 필요없게된 serverSocket도 제거해줌
+			//serverSocket이 아직 켜저있으면 ServerSocket을 닫아줌
+			if(serverSocket!=null && !serverSocket.isClosed()) {
+				serverSocket.close();
+			}
+			//마찬가지로 이제 아예 서버가 끊어지니 ThreadPoll도 함께 닫아줌
+			if(executorService!=null&&!executorService.isShutdown()) {
+				executorService.shutdown();
+			}
+			Platform.runLater(()->{
+				displayText("[서버 멈춤]");
+				btnStartStop.setText("start");
+			});
+		} catch(Exception e){}
+	}
+	
+	class Client{
+		//많은 Client를 관리하기 위해서 server에서 Client에서 server를 관리한다
+		Socket socket;
+		Client(Socket socket){
+			this.socket = socket;
+		}
+		void Recive(){
+			Runnable runnable = new Runnable() {
+
+				@Override
+				public void run() {
+					try {
+						while(true) {
+							byte[] byteArr = new byte[100];
+							InputStream inputStream = socket.getInputStream();
+							
+							int readByteCount = inputStream.read(byteArr);
+							//클라이언트가 정상적으로 socket의 close() 호출경우
+							if(readByteCount == -1) {throw new IOException();}
+							
+							String message = "[요청 처리:" +socket.getRemoteSocketAddress()+": "+ Thread.currentThread().getName()	+ "]";
+							Platform.runLater(()->displayText(message));
+							String data = new String(byteArr, 0, readByteCount, "UTF-8");
+							
+							for(Client client : connections) {
+								client.send(data);
+							}
+						
+						}
+					}catch(Exception e){
+						try {
+							connections.remove(Client.this);
+							String message = "[클라이언트통신 안됨: "+socket.getRemoteSocketAddress()+": "+Thread.currentThread().getName()+"]";
+							Platform.runLater(()->displayText(message));
+							socket.close();
+						}catch(IOException e2){}
+					}
+				}
+				
+			};
+			executorService.submit(runnable);
+		}
+		void send(String data){
+			Runnable runnable = new Runnable() {
+				@Override
+				public void run() {
+					try {
+						byte[] byteArr = data.getBytes("UTF-8");
+						OutputStream outputStream = socket.getOutputStream();
+						outputStream.write(byteArr);
+						outputStream.flush();
+					}catch(Exception e) {
+						try {
+							String message = "[클라이언트통신 안됨: "+socket.getRemoteSocketAddress()+": "+Thread.currentThread().getName()+"]";
+							Platform.runLater(()->displayText(message));
+							socket.close();
+						}catch(IOException e2) {}
+						
+					}
+				}
+				
+			};
+			executorService.submit(runnable);
+		}
+	}
+
+	//////////////////////////////////////////////////////
+	TextArea txtDisplay;
+	Button btnStartStop;
+	
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		BorderPane root = new BorderPane();
+		root.setPrefSize(500, 300);
+		
+		txtDisplay = new TextArea();
+		txtDisplay.setEditable(false);
+		BorderPane.setMargin(txtDisplay, new Insets(0,0,2,0));
+		root.setCenter(txtDisplay);
+		
+		btnStartStop = new Button("start");
+		btnStartStop.setPrefHeight(30);
+		btnStartStop.setMaxWidth(Double.MAX_VALUE);
+		btnStartStop.setOnAction(e->{
+			if(btnStartStop.getText().equals("start")) {
+				startServer();
+			} else if(btnStartStop.getText().equals("stop")){
+				stopServer();
+			}
+		});
+		root.setBottom(btnStartStop);
+		
+		Scene scene = new Scene(root);
+		scene.getStylesheets().add(getClass().getResource("app.css").toString());
+		primaryStage.setScene(scene);
+		primaryStage.setTitle("Server");
+		primaryStage.setOnCloseRequest(event->stopServer());
+		primaryStage.show();
+	}
+	
+	void displayText(String text) {
+		txtDisplay.appendText(text + "\n");
+	}	
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+}

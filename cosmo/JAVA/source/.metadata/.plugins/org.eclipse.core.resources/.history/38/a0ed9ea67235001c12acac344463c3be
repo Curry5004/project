@@ -1,0 +1,12 @@
+package sec06.exam01_array_bylist;
+
+public class ArrayCreatByValueListExample {
+	public static void main(String[] args) {
+		int[] scores = {83, 90, 87};
+		System.out.println("scores[0] : "+ scores[0]);
+		System.out.println("scores[1] : "+ scores[1]);
+		System.out.println("scores[2] : "+ scores[2]);
+		//scores라는 이름 하나도 저 점수들을 한번에 모음
+	}
+
+}

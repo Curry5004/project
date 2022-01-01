@@ -1,0 +1,10 @@
+package sec04.exam01_anchorpane;
+
+public class AppMain extends Application {
+
+	
+	public static void main(String[] args) {
+
+	}
+
+}

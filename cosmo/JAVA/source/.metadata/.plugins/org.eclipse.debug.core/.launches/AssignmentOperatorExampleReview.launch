@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/studyChap03/src/sec04/exam06_assignment/review/AssignmentOperatorExampleReview.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="sec04.exam06_assignment.review.AssignmentOperatorExampleReview"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="studyChap03"/>
+</launchConfiguration>

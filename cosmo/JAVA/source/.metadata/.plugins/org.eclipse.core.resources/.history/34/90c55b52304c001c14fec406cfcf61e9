@@ -1,0 +1,12 @@
+package Customer;
+
+public class Customer {
+	String customerIDNo;
+	private String name;
+	private int Count;
+	private int balance;
+	
+	public Grade grade;
+	
+
+}

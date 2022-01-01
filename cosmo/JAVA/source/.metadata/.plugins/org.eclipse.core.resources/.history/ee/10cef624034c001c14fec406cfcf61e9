@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout*?>
+<?impott javafx.geometry*?>
+<?impott javafx.scene.control*?>
+
+<FlowPane xmlns:fx="http://javafx.com/fxml/1"
+	prefWidth="300.0" prefHeight="70.0" hgap="10.0" vgap="10.0">
+	<padding>
+		<Inserts top="10.0" rignt="10.0" bottom="10.0" left="10.0"/>
+	</padding>
+	
+	<children>
+		<Button text="Button"/>
+		<Button text="Button"/>
+		<Button text="Button"/>
+		<Button text="Button"/>
+		<Button text="Button"/>
+		<Button text="Button"/>
+	</children>
+</FlowPane>
+

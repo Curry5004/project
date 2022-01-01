@@ -1,0 +1,21 @@
+package Customer;
+
+public class Grade {
+	//field
+	//방문 횟수와 사용액으로 등급을 정할 예정
+	private int Count;
+	private int balance;
+	public static String grade;
+	
+	public static String runGrade(int count, int balance) {
+		if(count>=10 || balance>=200000) {
+			return grade="골드";
+		} else if (count>=10 || balance>=150000) {
+			return grade="실버";
+		} else if (count>=5 || balance>=100000) {
+			return grade="브론즈";
+		} else {
+			return grade="일반";
+		}
+	}
+}

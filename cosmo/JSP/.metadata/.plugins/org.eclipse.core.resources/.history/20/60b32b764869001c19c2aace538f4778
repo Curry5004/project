@@ -1,0 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("utf-8");
+%>
+<jsp:useBean id="memberInfo" class="studyChap08.member.MemberInfo"/>
+<jsp:setProperty property="memberInfo" name="*"/>
+<%-- 아이디랑 비밀번호를 따로 설정해주지 않아서 우선 임시방편으로 비밀번호와 아이디는 동일화다는 전제를 깔아주기 위해 아래의 프로퍼티를 사용 --%>
+<jsp:setProperty property="memberInfo" name="password" value="<%=memberInfo.getId() %>"/>
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table width="400" border="1" cellpadding="0" cellspacing="0">
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+</html>

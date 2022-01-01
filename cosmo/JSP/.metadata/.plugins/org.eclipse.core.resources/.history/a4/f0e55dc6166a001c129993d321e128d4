@@ -1,0 +1,13 @@
+package studyChap11;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Thermometer {
+	private Map<String, Double> locaitonCelsiusMap = new HashMap<>();
+	
+	public void setCelsius(String location, Double value) {
+		
+	}
+	
+}

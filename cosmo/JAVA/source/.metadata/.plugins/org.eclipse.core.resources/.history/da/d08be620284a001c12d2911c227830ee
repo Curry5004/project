@@ -1,0 +1,34 @@
+package verify.exam11;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.OutputStream;
+import java.net.Socket;
+
+
+public class ClientExample {
+	public static void main(String[] args) throws Exception {		
+		Socket socket = new Socket("localhost", 5001);
+		OutputStream os = socket.getOutputStream();	
+		
+		//이거 예제풀때 주소 꼬오오옹옥 확인하기!
+		String filePath = "C:/JavaProgramming/source/chap18/src/sec04/exam03_fileoutputstream/house.jpg";
+		File file = new File(filePath);
+		
+		String fileName = file.getName();
+		byte[] fileByte = new byte[100];
+		int readByteNo = 0;
+		FileInputStream fis = new FileInputStream(filePath);
+		while
+		fis.read(fileByte);
+		
+		System.out.println("[파일 보내기 시작] " + fileName);
+		os.write(fileByte);
+		os.flush();
+		System.out.println("[파일 보내기 완료]");		
+		
+		fis.close();
+		os.close();
+		socket.close();
+	}
+}

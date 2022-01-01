@@ -1,0 +1,6 @@
+package studyChap11;
+
+public class Thermometer {
+	private Map<String, Double> locaitonCelsiusMap = new Hashmap<>();
+	
+}

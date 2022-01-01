@@ -1,0 +1,62 @@
+package Outback;
+
+public class Customer {
+	public String name;
+	public int count;
+	public int balance;
+	public String customerGrade;
+	double bounusRation;
+	
+	
+	public Customer(String name, int count, int balance) {
+		this.name=name;
+		this.count=count;
+		this.balance=balance;
+		initCuetomer();
+	}
+	
+		
+	private void initCuetomer() {
+		customerGrade="Silver";
+		bounusRation=0.1;
+	}
+	
+	public int calcPrice(int price) {
+		price -= (int)(price*bounusRation);
+		return price;
+	}
+	public String showInfo() {
+		return
+	}
+	
+	
+	
+	
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getCount() {
+		return count;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+
+	
+
+}

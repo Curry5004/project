@@ -1,0 +1,17 @@
+package Outback;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Run {
+	public static void main (String[] args) {
+		List<Customer> list = new ArrayList<Customer>();
+		list.add(new Customer("Á¤Âù¼Ö", 5, 100000));
+		list.add(new SilverCustomer("À±ÀÌ¼Ò", 10, 100000));
+		list.add(new PlatinumCustomer("È«ÁöÈ¯", 5, 100000));
+		list.add(new Customer("¼ÒÁßÇÑ", 5, 100000));
+		list.add(new GoldCustomer("±è¹Î¼®", 20, 100000));
+		
+		
+	}
+}

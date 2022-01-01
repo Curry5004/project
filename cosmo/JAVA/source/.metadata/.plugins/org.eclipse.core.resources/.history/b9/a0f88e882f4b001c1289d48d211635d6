@@ -1,0 +1,6 @@
+package sec02.exam01_application_start;
+
+public class AppMain extends Application{
+	
+
+}

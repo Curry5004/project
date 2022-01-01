@@ -1,0 +1,10 @@
+package Outback;
+
+import java.util.ArrayList;
+
+public class Main {
+	public static void main (String[] args) {
+		List<Customer> list = new ArrayList<Customer>(30);
+		
+	}
+}

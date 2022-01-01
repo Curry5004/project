@@ -1,0 +1,11 @@
+package Outback;
+
+public class BronzeCustomer extends Customer {
+
+	public BronzeCustomer(String name, int count, int balance) {
+		super(name, count, balance);
+		customerGrade="Bronze";
+		bounusRation=0.2;
+	}
+
+}

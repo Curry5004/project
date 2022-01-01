@@ -1,0 +1,19 @@
+package util;
+
+import java.util.Map;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+
+public class Cookies {
+	private Map<String, Cookie> cookieMap = new java.util.HashMap<String, Cookie>();
+	
+	public Cookies(HttpServletRequest request) {
+		Cookie[] cookies = request.getCookies();
+		if(cookies!=null && cookies.length>0) {
+			
+		}
+		
+	}
+
+}

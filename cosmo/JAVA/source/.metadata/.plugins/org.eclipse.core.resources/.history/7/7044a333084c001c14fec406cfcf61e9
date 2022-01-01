@@ -1,0 +1,18 @@
+package sec05.exam01_event_handler;
+
+import javafx.application.Application;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+
+public class AppMain extends Application{
+	
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		HBox root = new HBox();
+		
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+}
