@@ -748,7 +748,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_mhJ_bkjrEeyTZo3eOxNqew" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_K2R9sE6hEeynZo1AMVD-jA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_mhO_1UjrEeyTZo3eOxNqew"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_tA2SAGsbEeyJ__qXt00dsA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_mhO_1UjrEeyTZo3eOxNqew"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_mhJ_e0jrEeyTZo3eOxNqew" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -775,7 +775,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_mhJ_1kjrEeyTZo3eOxNqew" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_K2Ty4E6hEeynZo1AMVD-jA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_mhO_eEjrEeyTZo3eOxNqew"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_tA4HMWsbEeyJ__qXt00dsA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_mhO_eEjrEeyTZo3eOxNqew"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_mhJ_4kjrEeyTZo3eOxNqew" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -1215,6 +1215,18 @@
     <bindings xmi:id="_mhKBX0jrEeyTZo3eOxNqew" keySequence="CTRL+DEL" command="_mhO9t0jrEeyTZo3eOxNqew"/>
     <bindings xmi:id="_mhKBYEjrEeyTZo3eOxNqew" keySequence="CTRL+=" command="_mhO_EUjrEeyTZo3eOxNqew"/>
     <bindings xmi:id="_mhKBYUjrEeyTZo3eOxNqew" keySequence="ALT+CTRL+ARROW_DOWN" command="_mhO-OUjrEeyTZo3eOxNqew"/>
+    <bindings xmi:id="_sscvUGsbEeyJ__qXt00dsA" keySequence="CTRL+SHIFT+A" command="_ssDGtGsbEeyJ__qXt00dsA"/>
+    <bindings xmi:id="_ssdWYGsbEeyJ__qXt00dsA" keySequence="CTRL+E" command="_ssDGt2sbEeyJ__qXt00dsA"/>
+    <bindings xmi:id="_ssd9cGsbEeyJ__qXt00dsA" keySequence="ALT+SHIFT+I" command="_ssDGv2sbEeyJ__qXt00dsA"/>
+    <bindings xmi:id="_ssd9cWsbEeyJ__qXt00dsA" keySequence="CTRL+SHIFT+D" command="_ssDGuGsbEeyJ__qXt00dsA"/>
+    <bindings xmi:id="_ssd9cmsbEeyJ__qXt00dsA" keySequence="CTRL+D" command="_ssDGtmsbEeyJ__qXt00dsA"/>
+    <bindings xmi:id="_ssekgGsbEeyJ__qXt00dsA" keySequence="CTRL+SHIFT+/" command="_ssDGu2sbEeyJ__qXt00dsA"/>
+    <bindings xmi:id="_ssfLkGsbEeyJ__qXt00dsA" keySequence="CTRL+SHIFT+U" command="_ssDGtWsbEeyJ__qXt00dsA"/>
+    <bindings xmi:id="_ssfyoGsbEeyJ__qXt00dsA" keySequence="CTRL+M" command="_ssDGvmsbEeyJ__qXt00dsA"/>
+    <bindings xmi:id="_ssgZsGsbEeyJ__qXt00dsA" keySequence="CTRL+SHIFT+I" command="_ssDGxGsbEeyJ__qXt00dsA"/>
+    <bindings xmi:id="_ssgZsWsbEeyJ__qXt00dsA" keySequence="ALT+CTRL+[" command="_ssDGwGsbEeyJ__qXt00dsA"/>
+    <bindings xmi:id="_sshAwGsbEeyJ__qXt00dsA" keySequence="CTRL+U" command="_ssDGxmsbEeyJ__qXt00dsA"/>
+    <bindings xmi:id="_sshAwWsbEeyJ__qXt00dsA" keySequence="ALT+CTRL+]" command="_ssDGwmsbEeyJ__qXt00dsA"/>
   </bindingTables>
   <bindingTables xmi:id="_mhKBYkjrEeyTZo3eOxNqew" elementId="org.eclipse.jdt.ui.breadcrumbEditorScope" bindingContext="_mhO1_UjrEeyTZo3eOxNqew">
     <bindings xmi:id="_mhKBY0jrEeyTZo3eOxNqew" keySequence="ALT+SHIFT+B" command="_mhPAi0jrEeyTZo3eOxNqew"/>
@@ -3589,6 +3601,29 @@
   <commands xmi:id="_mhPBgUjrEeyTZo3eOxNqew" elementId="org.eclipse.xtext.xbase.ui.hierarchy.OpenTypeHierarchy" commandName="Open Type in Hierarchy" description="Open a type in the type hierarchy view" category="_mhPBqEjrEeyTZo3eOxNqew"/>
   <commands xmi:id="_mhPBgkjrEeyTZo3eOxNqew" elementId="AUTOGEN:::org.eclipse.xtend.core.Xtend.ide.rulerActions/org.eclipse.xtend.core.Xtend.doubleClickBreakpointAction" commandName="Not Used" category="_mhPBqEjrEeyTZo3eOxNqew"/>
   <commands xmi:id="_mhPBg0jrEeyTZo3eOxNqew" elementId="AUTOGEN:::org.eclipse.xtext.purexbase.PureXbase.ide.rulerActions/org.eclipse.xtext.purexbase.PureXbase.doubleClickBreakpointAction" commandName="Not Used" category="_mhPBqEjrEeyTZo3eOxNqew"/>
+  <commands xmi:id="_ssDGsGsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.increment_number_by_10" commandName="Increment number by 10" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGsWsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.increment_number_by_01" commandName="Increment number by 0.1" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGsmsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.reflect_css_value" commandName="Reflect CSS Value" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGs2sbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.decrement_number_by_1" commandName="Decrement number by 1" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGtGsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.wrap_with_abbreviation" commandName="Wrap With Abbreviation..." category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGtWsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.update_image_size" commandName="Update Image Size" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGtmsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.match_pair_outward" commandName="Match Pair Outward" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGt2sbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.expand_abbreviation" commandName="Expand Abbreviation" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGuGsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.match_pair_inward" commandName="Match Pair Inward" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGuWsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.decrement_number_by_10" commandName="Decrement number by 10" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGumsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.decrement_number_by_01" commandName="Decrement number by 0.1" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGu2sbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.toggle_comment" commandName="Toggle Comment" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGvGsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.increment_number_by_1" commandName="Increment number by 1" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGvWsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.evaluate_math_expression" commandName="Evaluate Math Expression" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGvmsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.merge_lines" commandName="Merge Lines" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGv2sbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.encode_decode_data_url" commandName="Encode/Decode Data:URL" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGwGsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.prev_edit_point" commandName="Previous Edit Point" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGwWsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.select_previous_item" commandName="Select Previous Item" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGwmsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.next_edit_point" commandName="Next Edit Point" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGw2sbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.select_next_item" commandName="Select Next Item" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGxGsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.remove_tag" commandName="Remove Tag" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGxWsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.matching_pair" commandName="Go to Matching Pair" category="_ssCfoWsbEeyJ__qXt00dsA"/>
+  <commands xmi:id="_ssDGxmsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.split_join_tag" commandName="Split/Join Tag" category="_ssCfoWsbEeyJ__qXt00dsA"/>
   <addons xmi:id="_mhPBhEjrEeyTZo3eOxNqew" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_mhPBhUjrEeyTZo3eOxNqew" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_mhPBhkjrEeyTZo3eOxNqew" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
@@ -3655,4 +3690,5 @@
   <categories xmi:id="_mhPBw0jrEeyTZo3eOxNqew" elementId="org.eclipse.pde.runtime.spy.commands.category" name="Spy"/>
   <categories xmi:id="_mhPBxEjrEeyTZo3eOxNqew" elementId="org.eclipse.xtext.ui.category.XtextEditor" name="Editing" description="Editing Commands"/>
   <categories xmi:id="_mhPBxUjrEeyTZo3eOxNqew" elementId="org.eclipse.xtext.ui.category.refactoring" name="Refactoring" description="Refactoring Commands"/>
+  <categories xmi:id="_ssCfoWsbEeyJ__qXt00dsA" elementId="io.emmet.eclipse.commands.category" name="Emmet"/>
 </application:Application>
