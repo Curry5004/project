@@ -1,9 +1,0 @@
-package sec05.exam01_event_handler;
-
-public class AppMain extends Application{
-
-	public static void main(String[] args) {
-
-	}
-
-}

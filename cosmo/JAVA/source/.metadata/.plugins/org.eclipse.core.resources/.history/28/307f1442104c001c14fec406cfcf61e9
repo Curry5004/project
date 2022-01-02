@@ -1,5 +1,0 @@
-package sec06.exam01_property_listener;
-
-public class RootController implements Initializable {
-
-}

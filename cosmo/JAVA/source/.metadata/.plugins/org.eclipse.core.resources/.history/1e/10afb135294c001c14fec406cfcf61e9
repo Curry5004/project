@@ -1,7 +1,0 @@
-package Customer;
-
-public class List {
-	private String customerIDNo;
-	Map<customerIDNo, Customer> = new Hashmap<>();
-	
-}

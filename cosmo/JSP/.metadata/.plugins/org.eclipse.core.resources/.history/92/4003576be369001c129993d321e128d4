@@ -1,7 +1,0 @@
-package util;
-
-public class Cookies {
-	private Map<String, Cookie> cookieMap = new Java.util.HashMap<String, cookie>();
-	
-
-}

@@ -1,9 +1,0 @@
-package Customer;
-
-public class Grade {
-	//field
-	//방문 횟수와 사용액으로 등급을 정할 예정
-	private int Count;
-	private int balance;
-	
-}

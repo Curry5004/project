@@ -1,9 +1,0 @@
-package Customer;
-
-import java.util.Map;
-
-public class List {
-	public String customerIDNo;
-	public Map<customerIDNo, Customer> Customer = new HashMap<>();
-	
-}

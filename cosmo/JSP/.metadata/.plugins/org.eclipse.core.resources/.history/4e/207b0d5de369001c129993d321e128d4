@@ -1,6 +1,0 @@
-package util;
-
-public class Cookies {
-	private Map<String, Cookie> cookieMap = new Jav
-
-}

@@ -1,6 +1,0 @@
-package sec03.exam01_programmatical_layout;
-
-public class Appmain extends Application{
-	
-
-}

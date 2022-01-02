@@ -1,7 +1,0 @@
-package sec06.exam02_property_bind;
-
-import javafx.fxml.Initializable;
-
-public class RootController implements Initializable {
-
-}
