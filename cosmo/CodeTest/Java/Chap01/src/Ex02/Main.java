@@ -17,7 +17,7 @@ public class Main {
 		  charArr[i] = str.charAt(i);
      }
 	  for(int i=0; i<str.length(); i++) {
-		  if(charArr[i]z`)
+		  if(charArr[i])
 	  }
   }
 }
