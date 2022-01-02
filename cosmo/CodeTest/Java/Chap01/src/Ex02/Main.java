@@ -7,7 +7,7 @@ public class Main {
     Scanner in=new Scanner(System.in);
     String input1 = in.nextLine();
     System.out.println(solution(input1));
-    
+    //asd
 
   }
   public static String solution(String str1) {
