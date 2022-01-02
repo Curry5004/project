@@ -17,6 +17,8 @@ public class Main {
      String char1 = input2.toLowerCase();
      
     int search =str.indexOf(char1);
+    System.out.println("hi");
     return 'a';
+  
   }
 }
