@@ -16,6 +16,8 @@ public class Main {
      String str = input1.toLowerCase();
      String char1 = input2.toLowerCase();
      
+     
+     //충충돌 테스트
     int search =str.indexOf(char1);
     System.out.println("hi");
     return 'a';
