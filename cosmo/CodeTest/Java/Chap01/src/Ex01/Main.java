@@ -15,7 +15,7 @@ public class Main {
   public static char solution(String input1, String input2) {
      String str = input1.toLowerCase();
      String char1 = input2.toLowerCase();
-     
+     //이렇게 충돌나면 어떻게?
     int search =str.indexOf(char1);
     System.out.println("hi");
     return 'a';
