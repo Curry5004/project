@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="EGit.KnownHosts">
+		<item value="bitbucket.org"/>
 		<item value="git.eclipse.org"/>
 		<item value="github.com"/>
-		<item value="bitbucket.org"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/Curry5004/project.git"/>
 	</list>
 	<list key="CommitDialog.authorValues">
 		<item value="JiHwan &lt;yunjin5004@naver.com&gt;"/>
