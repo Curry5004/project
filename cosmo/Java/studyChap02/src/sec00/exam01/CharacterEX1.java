@@ -13,7 +13,6 @@ public class CharacterEX1 {
 		System.out.println(ch3); //그대로 나온다
 		System.out.println((char)ch3); // 이도 마찬가지로 형변환을 사용하여 정수타입에서 char 타입으로 변화한 결과 알파벳이 나오게 되었다.
 		/* 지금은 디폴트인 아스키코드를 이용해서 글자를 표연하고 있으나 프리퍼런스에서 표현 방식을 바꿔서서 유니코드같은것으로도 전환 할 수도 있다 만약 한국어를 콘솔로 출력 해야 한다면 바꿔서 할 것*/
+	System.out.println("HELLO WORLD");
 	}
-	
-
 }
