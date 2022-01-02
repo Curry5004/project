@@ -10,5 +10,8 @@ public class LiteralExample {
 		
 		int var3 = 0x10;
 		System.out.println(var3);
+		
+		int var4 = 1123;
+		System.out.println(var4);
 	}
 }
