@@ -28,15 +28,15 @@ public class Main {
 	  }
 	  return answer;
   }
-  /*method Á¤¸®
-   * String.toCharArray -> StringÀ» char ´ÜÀ§·Î ÂÉ°Ô¾î char[] ·Î ¸®ÅÏÇÑ´Ù
-   * Character.isLowerCase(variable_char_type) -> variableÀÇ ¹®ÀÚ°¡ ¼Ò¹®ÀÚ¸é ture¸¦ ¸®ÅÏÇÑ´Ù
+  /*method ì •ë¦¬
+   * String.toCharArray -> Stringì„ char ë‹¨ìœ„ë¡œ ìª¼ê²Œì–´ char[] ë¡œ ë¦¬í„´í•œë‹¤
+   * Character.isLowerCase(variable_char_type) -> variableì˜ ë¬¸ìžê°€ ì†Œë¬¸ìžë©´ tureë¥¼ ë¦¬í„´í•œë‹¤
    * 
-   * ¾ËÁö ¸øÇß´ø Æ÷ÀÎÆ®.
-   * valueOf¸¦ »ç¿ëÇÏÁö ¾Ê°í ¹®ÀÚ¿­À» ´õÇÔÀ¸·Î StringÀ¸·Î ¸¸µé ¼ö ÀÖ¾ú´Ù. ¹®ÀÚ¿¡µµ ¿¬»ê½ÄÀÌ ÀÛ¿ëÇÏ¸ç ±× °á°ú´Â String Å¸ÀÔÀÌ¶ó´Â °ÍÀ» ¸í½ÉÇÒ °Í
-   * ¾Æ½ºÅ° ÄÚµåÀÇ ¼ýÀÚ Å¸ÀÔÀ¸·Î Á¢±ÙÇÏ¿´À¸³ª isLowerCase°°Àº methodµµ ÀÖ¾úÀ½. ²À Âü°íÇÒ °Í
+   * ì•Œì§€ ëª»í–ˆë˜ í¬ì¸íŠ¸.
+   * valueOfë¥¼ ì‚¬ìš©í•˜ì§€ ì•Šê³  ë¬¸ìžì—´ì„ ë”í•¨ìœ¼ë¡œ Stringìœ¼ë¡œ ë§Œë“¤ ìˆ˜ ìžˆì—ˆë‹¤. ë¬¸ìžì—ë„ ì—°ì‚°ì‹ì´ ìž‘ìš©í•˜ë©° ê·¸ ê²°ê³¼ëŠ” String íƒ€ìž…ì´ë¼ëŠ” ê²ƒì„ ëª…ì‹¬í•  ê²ƒ
+   * ì•„ìŠ¤í‚¤ ì½”ë“œì˜ ìˆ«ìž íƒ€ìž…ìœ¼ë¡œ ì ‘ê·¼í•˜ì˜€ìœ¼ë‚˜ isLowerCaseê°™ì€ methodë„ ìžˆì—ˆìŒ. ê¼­ ì°¸ê³ í•  ê²ƒ
    */
-//	char Å¸ÀÔÀÇ ¿¬»ê½ÄÀ» È°¿ë
+//	char íƒ€ìž…ì˜ ì—°ì‚°ì‹ì„ í™œìš©
 //public static String solution(String str1) {
 //	  String str = str1;
 //	  char[] charArr = new char[str.length()];
