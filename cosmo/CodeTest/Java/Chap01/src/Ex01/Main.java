@@ -16,6 +16,8 @@ public class Main {
      char char2 = char1.charAt(0);
      int counter = 0;
    
+     
+     //String.toCharArray() -> String을 문자 단위로 찢어서 배열에 넣을때 사용
      char[] strarr = new char[str.length()];
      for(int i=0; i<str.length(); i++) {
     	 strarr[i] = str.charAt(i);
