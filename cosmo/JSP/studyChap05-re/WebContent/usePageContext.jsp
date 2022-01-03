@@ -12,6 +12,7 @@
 	<% pageContext.getOut().println("안녕하세요"); %><br>
 	
 	<%--어플리케이션 객체  --%>
+	<%--초기화 파라미터 객체 조회  --%>
 	<%
 		Enumeration<String> initParamEnum = application.getInitParameterNames();
 		while(initParamEnum.hasMoreElements()){
@@ -23,8 +24,10 @@
 		}
 	%>
 	
-	
+	<%--서버정보  --%>
 	<%= application.getServerInfo() %> <br>
-	<%= applicaiton.getMajorVersion %> <br>
+	<%= application.getMajorVersion() %> <br>
+	<%= application.getMinorVersion() %> <br>
+	
 </body>
 </html>
