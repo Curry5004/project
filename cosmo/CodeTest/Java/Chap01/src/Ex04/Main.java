@@ -31,7 +31,6 @@ public class Main {
 				} else {
 					run=false;
 				}
-
 			}
 			System.out.println(c);
 		}		
