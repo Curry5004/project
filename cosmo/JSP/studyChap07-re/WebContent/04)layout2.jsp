@@ -18,7 +18,7 @@
 		<td>
 		<jsp:include page="/view/left.jsp"></jsp:include>	
 		</td>
-		<td> 글자 작성부 레이아웃 1</td>
+		<td> 글자 작성부 레이아웃 2</td>
 	</tr>
 	<tr>
 		<td colspan="2">
