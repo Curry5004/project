@@ -4,5 +4,6 @@
 <%
 	member.setId("madVirus");
 	member.setName("최범균");
+
 %>
-<<jsp:forward page="/02)useObject.jsp"/>
+<jsp:forward page="/02)useObject.jsp"/>

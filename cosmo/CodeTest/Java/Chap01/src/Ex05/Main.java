@@ -28,7 +28,7 @@ public class Main {
 
   }
 	public static void main(String[] args){
-	 Main t = new Main();
+	Main t = new Main();
     Scanner in=new Scanner(System.in);
     String str1 = in.nextLine();
     System.out.println(t.solution(str1)); 
