@@ -4,13 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>asd</title>
+<title>Insert title here</title>
 </head>
 <body>
- 이렇게 여기서 많이 써도??
- <%
- 	String path = "/from/to.jsp";
- %>
- <jsp:forward page="<%=path %>"></jsp:forward>
+A입니다.
+<%
+	request.setCharacterEncoding("utf-8");
+	String name = request.getParameter("name");
+%>
+<%=name %>
 </body>
 </html>

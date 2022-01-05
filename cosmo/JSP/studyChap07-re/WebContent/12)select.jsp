@@ -4,13 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>asd</title>
+<title>Insert title here</title>
 </head>
 <body>
- 이렇게 여기서 많이 써도??
- <%
- 	String path = "/from/to.jsp";
- %>
- <jsp:forward page="<%=path %>"></jsp:forward>
+<form action="<%=request.getContextPath()%>/13)view.jsp">
+	<select name="coda" >
+		<option value="A">A페이지</option>
+		<option value="B">B페이지</option>
+		<option value="C">C페이지</option>
+	</select>
+	
+	<input type="submit" value="이동" />
+</form>
+
 </body>
 </html>
