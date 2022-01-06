@@ -52,7 +52,7 @@ public class MessageDao {
 		ResultSet rs = null;
 		try {
 			pstmt = conn.prepareStatement(
-					"select * from guestbook_mesage where message_id = ?");
+					"select * from guestbook_message where message_id = ?");
 			pstmt.setInt(1,  messageId);
 			rs=pstmt.executeQuery();
 			if(rs.next()) {
@@ -127,7 +127,7 @@ public class MessageDao {
 		PreparedStatement pstmt = null;
 		try {
 			pstmt = conn.prepareStatement(
-					"delete from from guestbook_message where messae_id = ?"
+					"delete  from guestbook_message where messgae_id = ?"
 					);
 			pstmt.setInt(1, messageId);
 			return pstmt.executeUpdate();
@@ -138,17 +138,17 @@ public class MessageDao {
 	
 	
 	
-	public void updateMessage(Connection conn, Message message) throws SQLException{
-		PreparedStatement pstmt = null;
-		try {
-			pstmt = conn.prepareStatement("update guestbook_message " 
-					+ "set message=? where message_id=? ");
-			pstmt.setString(1, message.getMessage());
-			pstmt.setString(2, message.getId());
-			pstmt.executeUpdate();
-		} finally {
-			JdbcUtil.close(pstmt);
-		}
-		
-	}
+//	public void updateMessage(Connection conn, Message message) throws SQLException{
+//		PreparedStatement pstmt = null;
+//		try {
+//			pstmt = conn.prepareStatement("update guestbook_message " 
+//					+ "set message=? where message_id=? ");
+//			pstmt.setString(1, message.getMessage());
+//			pstmt.setString(2, message.getId());
+//			pstmt.executeUpdate();
+//		} finally {
+//			JdbcUtil.close(pstmt);
+//		}
+//		
+//	}
 }

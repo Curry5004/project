@@ -63,7 +63,7 @@ public class MessageListView {
 	}
 	
 	public boolean isEmpty() {
-		return messageCountPerPage ==0;	
+		return messageTotalCount ==0;	
 	}
 	
 	
