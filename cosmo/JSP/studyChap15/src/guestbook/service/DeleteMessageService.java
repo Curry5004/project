@@ -8,14 +8,14 @@ import guestbook.model.Message;
 import jdbc.JdbcUtil;
 import jdbc.connection.ConnectionProvider;
 
-public class DeletMessageService {
-	private static DeletMessageService instance = new DeletMessageService();
-	public static DeletMessageService getInstance(){
+public class DeleteMessageService {
+	private static DeleteMessageService instance = new DeleteMessageService();
+	public static DeleteMessageService getInstance(){
 			return instance;
 	}
-	private DeletMessageService() {}
+	private DeleteMessageService() {}
 	
-	public void deletMessage(int messageId, String password) {
+	public void deleteMessage(int messageId, String password) {
 		Connection conn = null;
 		try {
 			conn = ConnectionProvider.getConnection();

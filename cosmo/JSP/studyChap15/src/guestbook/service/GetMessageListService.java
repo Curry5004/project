@@ -12,7 +12,7 @@ import jdbc.connection.ConnectionProvider;
 
 public class GetMessageListService {
 	private static GetMessageListService instance = new GetMessageListService();
-	private GetMessageListService getInstance() {
+	public static GetMessageListService getInstance() {
 		return instance;
 	}
 	
