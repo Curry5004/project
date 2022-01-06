@@ -15,12 +15,14 @@ public class Main {
 	  
 	  int len = str.length()-1;
 	  for(int i=0; i<str.length(); i++) {
-		  while(ansArr[len]!='\u0000') {		  
-			  len = len-1;
-		  }
-		  if((65<=charArr[i] && charArr[i]<=90) || (97<=charArr[i] && charArr[i]<=122)) {
-			  ansArr[len]=charArr[i];
-			}
+
+			  while(ansArr[len]!='\u0000') {		  
+				  len = len-1;
+			  }
+			  if((65<=charArr[i] && charArr[i]<=90) || (97<=charArr[i] && charArr[i]<=122)) {
+				  ansArr[len]=charArr[i];
+				}  
+ 
 	  }
 	  String answer = new String(ansArr);
 	  return answer;
